@@ -3,19 +3,18 @@
   "id": "optionsreload",
   "version": "${version}",
   "name": "Options Reload",
-  "description": "A simple mod that adds F3 + O to reload the game options from options.txt",
-  "authors": [],
-  "contact": {},
+  "description": "A simple mod that adds F3 keybind to reload the game options from options.txt",
   "license": "LGPL-3",
-  "icon": "assets/optionsreload/icon.png",
   "environment": "client",
-  "entrypoints": {},
-  "mixins": [
-    "optionsreload.mixins.json"
-  ],
+  "entrypoints": {
+    "client-init": [
+      "com.awakenedredstone.optionsreload.OptionsReload"
+    ]
+  },
   "depends": {
     "fabricloader": ">=0.14.12",
-    "minecraft": "1.20.x",
-    "fabric-api": "*"
+    "minecraft": "1.8.9",
+    "osl-entrypoints": "*",
+    "osl-keybinds": "*"
   }
 }
